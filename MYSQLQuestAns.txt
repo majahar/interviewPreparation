@@ -1,0 +1,105 @@
+MySQL INTERVIEW QUESTIONS-
+Q:- What's MySQL ?
+MySQL is an open source relational database management system (RDBMS) that uses Structured Query Language (SQL). It's Original author - MySQL AB and it is written in C, C++.
+
+Q:- What is the Latest version of MySQL ?
+Current veriosn of MySQL: 8.0 MySQL 8.0 New Features
+
+MySQL Interview Questions - DDL, DML, DCL and TCL
+
+Q:- DDL, DML, DCL and TCL Statements in SQL with Examples
+This is the most important asked MySQL Interview Questions.
+
+DDL: Data Definition Language
+DML: Data Manipulation Language
+DCL: Data Control Language
+TCL: Transaction Control Language
+DDL	DML	DCL	TCL
+CREATE	SELECT	GRANT	BEGIN
+ALTER	INSERT	REVOKE	COMMIT
+DROP	UPDATE		ROLLBACK
+TRUNCATE	DELETE		SAVEPOINT
+COMMENT	UPSERT		
+RENAME	CALL		
+LOCK		
+EXPLAIN		
+
+
+Q:- What are the data type supported by mysql?
+Data type	Description
+CHAR(size)	Holds a fixed length string (can contain letters, numbers, and special characters).
+VARCHAR(size)	Holds a variable length string (can contain letters, numbers, and special characters).
+TINYTEXT	Holds a string with a maximum length of 255 characters
+TEXT	Holds a string with a maximum length of 65,535 characters
+BLOB	For BLOBs (Binary Large OBjects). Holds up to 65,535 bytes of data
+MEDIUMTEXT	Holds a string with a maximum length of 16,777,215 characters
+MEDIUMBLOB	For BLOBs (Binary Large OBjects). Holds up to 16,777,215 bytes of data
+LONGTEXT	Holds a string with a maximum length of 4,294,967,295 characters
+LONGBLOB	For BLOBs (Binary Large OBjects). Holds up to 4,294,967,295 bytes of data
+
+
+Q:-How to get current MySQL version?
+
+SELECT VERSION();
+Q:- What are the drivers in MySQL?
+PHP Driver
+JDBC Driver
+ODBC Driver
+C WRAPPER
+PYTHON Driver
+PERL Driver
+RUBY Driver
+
+Q:- How do you login to MySql using Unix shell?
+Log into your server using SSH.
+Now, Login into MySQL
+
+mysql -h hostname -u username -p password
+
+OR
+
+//Type following and press Enter
+mysql -u USERNAME -p
+//Now Enter Password
+
+Q:-What are the techniques for query optimization?
+Following are some techniques of query optimization
+
+use Indexes
+select only required columns instead of slecting all columns with *
+
+
+Q:- What is SQL Injection? How can we prevent SQL Injection?
+SQL injection is a code injection technique through which attacker can execute malicious SQL statements on your database server.
+
+You can prevent SQL injection by using following:
+
+Sanitize input variables.
+Parameters binding.
+Using stored procedures
+Never use depericated functions etc
+
+Q:- Get Highest salary from each department with employee name?
+
+select e.name, e.salary, e.department 
+from employee as e 
+INNER join(select max(salary) as m_s, department from employee as me group by department) 
+on e.salary=me.m_s and e.department=me.department;
+
+Q:-What do % and _ mean inside LIKE statement?
+% corresponds to 0 or more characters, _ is exactly one character.
+
+Q:-How to remove duplicate rows from table in MySQL?
+Delete row with highest id:
+
+
+DELETE u1 FROM users u1, users u2 WHERE u1.id > u2.id AND u1.name = u2.name
+Delete row with lowest id:
+
+
+DELETE u1 FROM users u1, users u2 WHERE u1.id < u2.id AND u1.name = u2.name
+
+Q:- What is the difference between WHERE and HAVING clause?
+WHERE act as Pre-filter whereas HAVING act as Post-filter.
+A WHERE is used to filter records before any groupings take place.
+HAVING is used to filter values after they have been groups. Only columns or expression in the group can be included in the HAVING clause’s conditions.

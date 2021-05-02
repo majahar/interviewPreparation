@@ -1,0 +1,242 @@
+dump database:-
+cd /var/www/html/dbdump
+sudo mysqldump -h stgumsdb.fliplearn.com -u root -p multi_question_bank > multi_question_bank.sql
+sudo mysqldump -h dev4soadb.fliplearn.com -u root -p flip_bl > flip_bl.sql
+
+sudo mysqldump -h stgumsdb.fliplearn.com -u root -p flip_vmcwp wp_nat_courses > wp_nat_courses.sql
+
+mysqldump -u root -p dbname table1 table2 table3 > table.sql
+
+
+
+create db name in database:
+sudo mysql -h localhost -u root -p multi_question_bank < /var/www/html/dbdump/multi_question_bank.sql
+
+sudo mysql -h localhost -u root -p fliplearn_gamification < /var/www/html/dbdump/fliplearn_gamification.sql
+
+mysql -h localhost -u root -p flip_bl < /var/www/html/dbdump/flip_bl.sql
+
+
+
+
+
+
+error debug:
+sudo su
+tail -f /var/log/apache2/*
+sudo tail -f /var/log/apache2/error.log
+
+
+
+sudo mysqldump -h stgumsdb.fliplearn.com -u root -p stg_assessment > stg_assessment.sql
+sudo mysql -h localhost -u root -p stg_assessment < /var/www/html/dbdump/stg_assessment.sql
+
+
+$server["qadb"]["dsn"] = "stgumsdb.fliplearn.com";
+$server["qadb"]["username"] = "root";
+$server["qadb"]["password"] = "flip@159$$";
+
+
+fetch repository:
+git branch
+
+git fetch --all
+
+git checkout Production
+
+Make a branch-
+git checkout -b PLAN-AND-SUBSCRIPTION
+
+for taking other branch code-
+come in your branch
+git pull origin dev
+
+
+
+run script for toppr->
+php topprMappingNew.php local toppr
+
+
+
+sudo mysql -h localhost -u root -p stg_moodle_lc < /var/www/html/dbdump/stg_moodle_lc.sql
+
+if you want get a new branch-
+command -
+git fetch
+git checkout SOLR-SYNC-UPDATE-V1
+git branch
+
+
+---=---
+cp src/com/fliplearn/group/components/business/GroupComponent.php /home/majahar/
+git checkout src/com/fliplearn/group/components/business/GroupComponent.php
+git checkout SOLR-SYNC-UPDATE-V1
+git branch
+git status
+
+
+ssh majahark@stgbl1.fliplearn.com
+ssh majahark@stgui1.fliplearn.com
+
+ssh majahark@stgvmcapp1.vidyamandir.com
+ssh majahark@stgvmcwp.vidyamandir.com
+
+
+
+
+
+pass : ijN(wSSwdX1Wx:Y9L<ez
+
+/var/log/nginx/ ke andar log file hogi
+tail -f /var/log/nginx/stgvmcbl.error.log
+tail -f /var/log/nginx/stvmcgbl.access.log
+
+tail -f /var/log/nginx/stvmcgbl.access.log
+
+tail -f /var/log/nginx/stgbl.access.log
+
+
+for school
+ssh majahark@stgschool1.fliplearn.com
+tail -f /var/log/nginx/stgschool.error.log
+
+for group
+ssh majahark@stggroup1.fliplearn.com
+tail -f /var/log/nginx/stggroup.error.log
+
+for ums
+ssh majahark@stgums1.fliplearn.com
+tail -f /var/log/nginx/stgums.error.log
+
+
+
+
+
+
+
+ssh kapil@int3bl.fliplearn.com
+
+mysql -h dev4soadb.fliplearn.com -u soa_app -p
+
+mysql -h int4soadb.fliplearn.com -u soa_app -p
+mysql -h stgumsdb.fliplearn.com -u root -p
+mysql -h stgumsdb.fliplearn.com -u root -p
+
+mysql -h stgvmcdb.fliplearn.com -u root -p
+
+
+mysql -h int3soadb.fliplearn.com -u soa_app -p
+
+ssh majahark@stgvmcapp1.vidyamandir.com for web ui
+
+
+
+
+open file-    vim test.php
+edit file - i
+save and exit-   pres esc and type(:) w
+exit -  q
+
+show the number on linux file
+set nu and press enter key
+ 
+  ---switch to a specific line number
+  press Esc
+  :14
+  press enter
+
+
+
+Postman Url To call bl apis-
+http://localhost/flip-business-layer/public/index.php/group/addUserToGroupByGroupCode
+http://localhost/flip-business-layer/public/index.php/user/deactivateLicence
+post parametter :{"params":{"product":"prime","uuid" : 1212,"isActive":0,"comment" : "test"}}
+
+
+
+copy from server:
+scp -r mkhan@stgui1.fliplearn.com:/var/www/flipwp .
+scp -r mkhan@stgui1.fliplearn.com:/var/www/flipwp/tesl.php .
+
+
+
+ on file mode-
+ --vi .git/config
+
+
+
+ To search any string in directories;
+ grep -R "your word" .
+
+
+
+Merge Branch-
+
+cut a branch from Production 
+git checkout -b MY-WORKING-BRANCH
+
+git checkout MY-WORKING-BRANCH
+git pull origin Production
+
+merge with production-
+git checkout Production
+git pull origin MY-WORKING-BRANCH
+git push origin Production
+
+
+code deployment:-
+-click on Docker
+-click on integration
+--choose componant like marketplace
+--click on fl_int_marketplace_DOCKER
+--click on Build wth Parameters(left side)
+
+
+
+key to open inspest element
+--   ctrl+shift+c
+
+to login on jenkins
+http://soajenkins.fliplearn.com:8080/
+http://vmcjenkins.vidyamandir.com:8080/view/Production/
+user:kapil
+pas:#RM87T`UejD*yr;
+
+
+
+Reset and sync local repository with remote branch
+
+git fetch origin
+git reset --hard origin/master
+git clean -f -d
+
+
+git diff VMC-STUDENT-FILTERS --name-only
+git diff VMC-STUDENT-FILTERS angularAMD-Webui/app/scripts/home/account/controller/profile-view-ctrl.js
+git merge Production --no-ff
+
+
+
+
+
+to show and kill port
+lsof -i tcp:8000
+kill -9 7069
+
+Authentication api with node and mysql
+https://jasonwatmore.com/post/2020/08/18/nodejs-mysql-simple-api-for-authentication-registration-and-user-management
+
+
+http://jsfiddle.net/prakash38/kvmkbb82/17/
+
+
+
+
+select in dropdown
+Deselect in dropdown
+search
+show label
+
+
+http://localhost:8888
+sudo php -S 0.0.0.0:8888 -t public/

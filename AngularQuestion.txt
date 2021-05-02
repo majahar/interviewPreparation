@@ -1,0 +1,340 @@
+--AOT/JIT
+All technologies Ahead of Time is a process of compiling higher-level language or intermediate language into a native machine code, which is system dependent.
+
+In simple words, when you serve/build your angular application, the Ahead of Time compiler converts your code during the build time before your browser downloads and runs that code. From Angular 9, by default compiling option is set to true for ahead of time compiler.
+--When you are using Ahead of Time Compiler, compilation only happens once, while you build your project.
+--It can minimize the size of your application.
+--The browser does not need to compile the code in run time, it can directly render the application immediately, without waiting to compile the app first so, it provides quicker component rendering.
+--The Ahead of time compiler detects template error earlier. It detects and reports template binding errors during the build steps before users can see them.
+
+What is the Just in Time (JIT) compiler ?
+
+Just in time compiler provides compilation during the execution of the program at a run time before execution. In simple words, code get compiles when it’s needed, not at the build time
+
+
+What is Arrow functions?
+Arrow functions allow us to write shorter function syntax: 
+Before: hello = function() { 
+return "Hello";
+}
+
+With Arrow Function:
+ hello = () => { "Hello" }
+ Arrow Functions Return Value by Default: 
+ hello = () => "Hello World!"; 
+ Arrow Function With Parameters: hello = (val) => "Hello " + val; Arrow Function Without Parentheses:
+
+
+-- Agile
+What is ECMA script?
+--It is a JavaScript standard meant to ensure the interoperability of Web pages across different Web browsers.
+-- Languages such as ActionScript, JavaScript, JScript all use ECMAScript as its core.
+--ECMAScript is a standard. JavaScript and ActionScript are well-known implementations of the ECMAScript standard.
+--ECMAScript is a Standard for a scripting languages.
+
+Question no: 8 :- Explain the importance of Component and Modules ?
+
+Question no: 9 :- What is a decorator in Angular ?
+
+Question no: 10 :- What are Annotationa or MetaData ?
+
+Question no: 11 :- What is a template ?
+
+Question no: 12 :- Explain the four types of Data bindings in Angular ?
+
+Question no: 13 :- Explain architecture of Angular ?
+
+Question no: 14 :- What is SPA in Angular ?
+
+Question no: 15 :- How to implement SPA in Angular ?
+
+Question no: 16 :- How to implement routing in Angular ?
+
+Question no: 17 :- Explain Lazy Loading ?
+
+Question no: 18 :- How to implement Lazy Loading in Angular ?
+
+Question no: 19 :- Define Services ?
+
+Question no: 20 :- What is Depedency Injection ?
+
+Question no: 21 :- How to implement Depedency Injection ?
+
+Question no: 23 :- Whats the benefit of Depedency Injection ?
+
+Question no: 24 :- Differentiate between ng serve and ng build ?
+
+Question no: 25 :- Explain the --prod parameter in ng build ?
+Question no: 25 :- what is Rxjs ?
+Question no: 25 :- what is Subscription  ?
+Question no: 25 :- what is Map ?
+Question no: 25 :-Diffrence between promis and observable ?
+Question no: 25 :-Pipes and custom pipes in angular ?
+
+ Question no: 25 what is closure in javascript
+
+
+
+
+
+
+ URL:https://www.youtube.com/watch?v=-jeoyDJDsSM&feature=youtu.be
+
+
+Question no: 1 :- Whats the use of Angular ?
+
+Answer- Angular is The javascript binding framework which hepls you to bind view with model.
+--It also hepls you to built SPA by using concept of routing.
+---http
+--Dependency injection
+
+Question no: 2 :-Diffrence b/W Angularjs and angular?
+Ans-Angular js is use javascript while angular is type script
+--Angular js is controller based while angular is component based
+--Angular js is not mobile compiant while angular is mobile compiant 
+-- Angular js does not have CLI While angular has cli
+--Angular js does not have lazy loading While angular has lazy loading
+
+
+Question no: 3 :- What are directives in Angular ?
+
+Ans- Directives are angular syntax which you writr inside html.
+-- it changes the behaviour of html DOM.
+<input [(ngModel)]= "value" type= "text" value="">
+<div>{{value}}</div>
+<div [hidden]="hide()">Hello</div>
+
+Question no: 3 :- Explain the different types of Angular directives ?
+
+Ans:-There are 3 types(SAC) of directives  
+--Structural Directives
+--Attribute Directive
+--component Directive
+
+Structural Directives-
+--Changes the structure of DOM element
+--They add or remove element in the DOM
+
+  <tr *ngFor="let item of userData; let i = index ">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.first_name}}</td>
+                <td>{{item.last_name}}</td>
+                <td>{{item.email}}</td>
+
+
+                    <td><button class="btn btn-success" (click)="deleteUser(item)"> Delete</button>
+                      <button class="btn btn-success" (click)="editUser(item)" style="margin-left: 20px;"> Edit</button></td>
+              </tr>
+
+
+   2- Attribute Directive-
+    It doen not Add or remove element but change behaviuor ,look and feel of element
+      Ex-        <div [hidden]="hide()">Hello</div>
+
+      3- Component Directive-
+      User control which have its own UI.
+
+      @component{}
+
+
+      Question no: 4 :- Explain the importance of NPM and Node_Modules folder ?
+
+Ans-Node packege manager-
+--If you want to go and install any thing
+npm install jquery
+
+it store into node_module folder
+
+Question no: 5 :- Explain the importance of Package.json file in Angular ?
+
+Ans-All the references of javascript framework all liosted into package.json file.
+
+Question no: 6 :- What is typescript and why do we need it ?
+
+Ans-It is super set of javascript.
+--It Add types to javascript.
+--It Provides OOP environment . So you can do your development faster and mode organise
+
+Question no: 7 :- Explain importance of Angular CLI ?
+
+Ans-CLI (command line interface) helps to craete redimate project template.Rather than starting from scractch, you can work from base code.
+
+Question no: 8 :- Explain the importance of Component and Modules ?
+
+Ans-: Component is mediator which binds view and model. it can bind css etc.
+Goups component called module.
+
+Question no: 9 :- What is a decorator in Angular ?
+Ans-Decorator says what type of class is this.
+
+@component({})
+
+
+Question no: 10 :- What are Annotationa or MetaData ?
+
+Ans-same Ans9
+
+
+Question no: 11- What is the difference between CSS and SCSS?
+Ans-
+In CSS we write code as depicted bellow, in full length.
+
+body{
+ width: 800px;
+ color: #ffffff;
+}
+body content{
+ width:750px;
+ background:#ffffff;
+}
+
+In SCSS we can shorten this code using a @mixin so we don’t have to write color and width properties again and again. We can define this through a function, similarly to PHP or other languages.
+$color: #ffffff;
+$width: 800px;
+
+@mixin body{
+ width: $width;
+ color: $color;
+
+ content{
+  width: $width;
+  background:$color;
+ }
+}
+
+13. How does one share data between components in Angular?
+Ans-Parent to child using @Input decorator 
+Consider the following parent component:
+@Component({
+        selector: 'app-parent',
+        template: `
+          <app-child [data]=data></app-child>
+        ` ,
+        styleUrls: ['./parent.component.css']
+      })
+      export class ParentComponent{
+        data:string = "Message from parent";
+        constructor() { }
+      }
+
+      In the above parent component, we are passing “data” property to the following child component:
+
+       import { Component, Input} from '@angular/core';
+
+      @Component({
+        selector: 'app-child',
+        template:`
+          <p>{{data}}</p>
+        `,
+        styleUrls: ['./child.component.css']
+      })
+      export class ChildComponent {
+        @Input() data:string
+        constructor() { }
+      }
+
+      In the child component, we are using @Input decorator to capture data coming from a parent component and using it inside the child component’s template.
+
+
+      --Child to parent using @ViewChild decorator 
+      Child component:
+  import {Component} from '@angular/core';
+
+      @Component({
+        selector: 'app-child',
+        template:`
+          <p>{{data}}</p>
+        `,
+        styleUrls: ['./child.component.css']
+      })
+      export class ChildComponent {
+        data:string = "Message from child to parent";
+        constructor() { }
+      }
+
+      Parent Component:
+
+       import { Component,ViewChild, AfterViewInit} from '@angular/core';
+      import { ChildComponent } from './../child/child.component';
+
+      @Component({
+        selector: 'app-parent',
+        template: `
+          <p>{{dataFromChild}}</p>
+        ` ,
+        styleUrls: ['./parent.component.css']
+      })
+      export class ParentComponent implements AfterViewInit {
+        dataFromChild: string;
+        @ViewChild(ChildComponent,{static:false}) child;
+
+        ngAfterViewInit(){
+          this.dataFromChild = this.child.data;
+        }
+        constructor() { }
+      }
+
+
+In the above example, a property named “data” is passed from the child component to the parent component. 
+@ViewChild decorator is used to reference the child component as “child” property. 
+Using the ngAfterViewInit hook, we assign the child’s data property to the messageFromChild property and use it in the parent component’s template.
+
+
+Child to parent using @Output and EventEmitter 
+
+In this method, we bind a DOM element inside the child component, to an event ( click event for example ) and using this event we emit data that will captured by the parent component: 
+
+Child Component:
+
+    
+      import {Component, Output, EventEmitter} from '@angular/core';
+
+      @Component({
+        selector: 'app-child',
+        template:`
+          <button (click)="emitData()">Click to emit data</button>
+        `,
+        styleUrls: ['./child.component.css']
+      })
+      export class ChildComponent {
+
+        data:string = "Message from child to parent";
+
+        @Output() dataEvent = new EventEmitter<string>();
+
+        constructor() { }
+
+        emitData(){
+          this.dataEvent.emit(this.data);
+        }
+      }
+    
+  
+As you can see in the child component, we have used @Output property to bind an EventEmitter. This event emitter emits data when the button in the template is clicked. 
+
+In the parent component’s template we can capture the emitted data like this:
+
+    
+      <app-child (dataEvent)="receiveData($event)"></app-child>
+    
+  
+Then inside the receiveData function we can handle the emitted data:
+
+    
+      receiveData($event){
+        this.dataFromChild = $event;
+      }
+what is closure in javascript
+ A inner function can also access variables defined outside the function, like this:
+
+ function parent(){
+ var test="rrr";
+
+ function child(){
+
+console.log(test);
+ }
+ child();
+ }
+parent()
+

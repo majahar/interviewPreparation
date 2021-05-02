@@ -1,0 +1,152 @@
+7--what is closure in javascript
+ A inner function can also access variables defined outside the function, like this:
+
+ function parent(){
+ var test="rrr";
+
+ function child(){
+
+console.log(test);
+ }
+ child();
+ }
+parent()
+
+Process.nextTick()-
+Whenever a new queue of operations is initialized we can think of it as a new tick. 
+--The process.nextTick() method adds the callback function to the start of the next event queue. 
+--It is to be noted that, at the start of the program process.nextTick() method is called for the first time before the event loop is processed.
+
+Set immediate-
+--Whenever we call setImmediate() method, it’s callback function is placed in the check phase of the next event queue. 
+--There is slight detail to be noted here that setImmediate() method is called in the poll phase and it’s callback functions are invoked in the check phase.
+
+1. What is Node.js? Where can you use it?
+Node.js is an open-source, cross-platform JavaScript runtime environment and library to run web applications outside the client’s browser. It is used to create server-side web applications.
+
+2. Why use Node.js?
+Node.js makes building scalable network programs easy. Some of its advantages include:
+
+It is generally fast
+It rarely blocks
+It offers a unified programming language and data type
+Everything is asynchronous 
+It yields great concurrency
+
+4. Why is Node.js Single-threaded?
+Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be achieved instead of the typical thread-based implementation
+
+What is NPM?
+NPM stands for Node Package Manager, responsible for managing all the packages and modules for Node.js.
+
+
+What is a callback?
+--Callbacks are nothing but functions that take some time to produce a result.
+--Usually these async callbacks (async short for asynchronous) are used for accessing values from databases, downloading images, reading files etc.
+--As these take time to finish, we can neither proceed to next line because it might throw an error saying unavailable nor we can pause our program.
+--So we need to store the result and call back when it is complete.
+
+What is callback hell in Node.js ?
+--This is a big issue caused by coding with complex nested callbacks.
+-- Here, each and every callback takes an argument that is a result of the previous callbacks. In this manner, The code structure looks like a pyramid, making it difficult to read and maintain.
+--Also, if there is an error in one function, then all other functions get affected.
+
+How to escape from a callback hell?
+
+--JavaScript provides an easy way of escaping from a callback hell. This is done by event queue and promises.
+--A promise is a returned object from any asynchronous function, to which callback methods can be added based on the previous function’s result.
+--Promises use .then() method to call async callbacks. We can chain as many callbacks as we want and the order is also strictly maintained.
+--Promises use .fetch() method to fetch an object from the network. It also uses .catch() method to catch any exception when any block fails.
+--So these promises are put in event queue so that they don’t block subsequent JS code. 
+--Also once the results are returned, the event queue finishes its operations.
+--There are also other helpful keywords and methods like async, wait, settimeout() to simplify and make better use of callbacks.
+
+Q-List down the steps using which “Control Flow” controls the function calls in Node.js?
+Ans-Control the order of execution
+Control flow does the following job-
+--Collect data
+--Limit concurrency
+--Call the next step in the program
+
+What are the modules in Node.js?
+Modules are like JavaScript libraries that can be used in a Node.js application to include a set of functions. To include a module in a Node.js application, use the require() function with the parentheses containing the module's name.
+
+14. What are some of the most commonly used libraries in Node.js?
+There are two commonly used libraries in Node.js:
+
+ExpressJS - Express is a flexible Node.js web application framework that provides a wide set of features to develop web and mobile applications.
+Mongoose - Mongoose is also a Node.js web application framework that makes it easy to connect an application to a database.
+
+ What does event-driven programming mean?
+An event-driven programming approach uses events to trigger various functions. An event can be anything, such as typing a key or clicking a mouse button. A call-back function is already registered with the element executes whenever an event is triggered.
+
+What is an Event Loop in Node.js?
+Event loops handle asynchronous callbacks in Node.js. It is the foundation of the non-blocking input/output in Node.js, making it one of the most important environmental features.
+
+What is an EventEmitter in Node.js?
+EventEmitter is a class that holds all the objects that can emit events
+Whenever an object from the EventEmitter class throws an event, all attached functions are called upon synchronously
+
+What are the two types of API functions in Node.js?
+The two types of API functions in Node.js are:
+
+1-Asynchronous, non-blocking functions(Non-blocking means that if an answer can't be returned rapidly, the API returns immediately with an error and does nothing else)
+
+2-Synchronous, blocking functions(Blocking refers to operations that block further execution until that operation finishes while non-blocking refers to code that doesn't block execution)
+
+What is the package.json file?
+The package.json file is the heart of a Node.js system. This file holds the metadata for a particular project. The package.json file is found in the root directory of any Node application or module
+
+This is what a package.json file looks like immediately after creating a Node.js project using the command: npm init
+
+What are streams in Node.js?
+Streams are objects that enable you to read data or write data continuously.
+
+There are four types of streams:
+
+Readable – Used for reading operations
+
+Writable − Used for write operations
+
+Duplex − Can be used for both reading and write operations
+
+Transform − A type of duplex stream where the output is computed based on input
+
+Explain asynchronous and non-blocking APIs in Node.js.
+All Node.js library APIs are asynchronous, which means they are also non-blocking
+A Node.js-based server never waits for an API to return data. Instead, it moves to the next API after calling it, and a notification mechanism from a Node.js event responds to the server for the previous API call
+
+What is the purpose of module.exports?
+A module in Node.js is used to encapsulate all the related codes into a single unit of code, which can be interpreted by shifting all related functions into a single file. You can export a module using the module.exports, which allows it to be imported into another file using a required keyword
+
+What is the difference between fork() and spawn() methods in Node.js?
+fork() is a particular case of spawn() that generates a new instance of a V8 engine
+Spawn() launches a new process with the available set of commands
+
+What is the buffer class in Node.js?
+Buffer class stores raw data similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap. Buffer class is used because pure JavaScript is not compatible with binary data
+
+What is piping in Node.js?
+Piping is a mechanism used to connect the output of one stream to another stream. It is normally used to retrieve data from one stream and pass output to another stream
+
+What is a reactor pattern in Node.js?
+A reactor pattern is a concept of non-blocking I/O operations. This pattern provides a handler that is associated with each I/O operation. As soon as an I/O request is generated, it is then submitted to a demultiplexer
+
+Explain the concept of middleware in Node.js.
+Middleware is a function that receives the request and response objects. Most tasks that the middleware functions perform are:  
+
+Execute any code
+Update or modify the request and the response objects
+Finish the request-response cycle
+Invoke the next middleware in the stack
+
+What are the different types of HTTP requests?
+HTTP defines a set of request methods used to perform desired actions. The request methods include:
+
+GET: Used to retrieve the data
+
+POST: Generally used to make a change in state or reactions on the server
+
+HEAD: Similar to the GET method, but asks for the response without the response body
+
+DELETE: Used to delete the predetermined resource
